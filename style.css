@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Header Section */
+.header {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background: url('img/1.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(155, 155, 155);
+}
+
+/* Darker Overlay */
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Menu Bar */
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    z-index: 10;
+}
+
+.menu .title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(155, 155, 155);
+}
+
+.menu nav {
+    display: flex;
+    gap: 20px;
+}
+
+.menu nav a {
+    color: rgb(155, 155, 155);
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.menu nav a:hover {
+    text-decoration: underline;
+}
+
+.header-content{
+    font-size: 1.5em;
+    margin: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Centering the categories section */
+#categories-section {
+    max-width: 1150px; /* Limit max width */
+    margin: 0 auto; /* Center the section */
+    padding: 20px;
+}
+
+/* Style for the title "Categories" */
+#categories-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Style for the categories list container */
+#categories-list {
+    display: flex;
+    justify-content: center; /* Center the categories */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    gap: 8px; /* Space between categories */
+    margin-top: 10px;
+}
+
+/* Style for individual category items */
+.category-item {
+    background-color: #ffffff; /* White background */
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 15px; /* Rounded corners */
+    text-align: center;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition */
+    border: 2px solid #ddd; /* Subtle border around items */
+}
+
+/* Hover effect for category items */
+.category-item:hover {
+    background-color: #516d57; /* Blue background on hover */
+    color: #fff; /* White text on hover */
+    border-color: #516d57; /* Blue border */
+    transform: scale(1.1); /* Slightly enlarge the item */
+}
+
+/* Active category - keeps the highlighted state after click */
+.category-item.active {
+    background-color: #516d57; /* Darker blue for active category */
+    color: white;
+    border-color: #516d57;
+}
+
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    #categories-list {
+        justify-content: center; /* Center the categories on mobile */
+        gap: 15px; /* Smaller gap on mobile */
+    }
+
+    .category-item {
+        font-size: 14px; /* Smaller font size */
+        padding: 10px 15px; /* Smaller padding */
+    }
+}
+
+
+
+
+
+
+
+
+
+/* MAIN SECTION: Contains both Filter & Dishes */
+.main-section {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    align-items: flex-start; /* Align filter & dishes properly */
+    gap: 20px;
+    padding: 20px;
+    margin: auto;
+}
+
+/* FILTER CONTAINER (LEFT SIDE) */
+.filter-container {
+    width: 280px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+/* Filter Header (Title + Icon) */
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    align-items: center;
+    color: #333;
+}
+
+.filter-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #007bff;
+}
+
+/* Filter Groups (Spiciness, Vegetarian, Nuts) */
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Range Input Styling */
+input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #516d57;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]:hover {
+    background: #ccc;
+}
+
+/* Checkbox Styling */
+.filter-group input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.filter-group label span {
+    font-weight: normal;
+    color: #666;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.filter-buttons button {
+    padding: 10px;
+    width: 48%;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#reset-filters {
+    background-color: #516d57;
+    color: white;
+}
+
+#reset-filters:hover {
+    background-color: black;
+}
+
+#apply-filters {
+    background-color: #516d57;
+    color: white;
+}
+
+#apply-filters:hover {
+    background-color: black;
+}
+
+/* DISHES CONTAINER (RIGHT SIDE) */
+.dishes-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Individual Dish Item */
+.restaurant-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.restaurant-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Product Image */
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Product Details */
+.product-details {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.product-details p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+/* Footer: Price on Left, Button on Right */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Price Styling */
+.price {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+    background-color: #516d57;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: black;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .dishes-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .dishes-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

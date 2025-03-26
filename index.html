@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories with Dishes</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="menu">
+            <div class="title">NumNum</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+            </nav>
+        </div>
+        <div class="header-content" style="color: rgb(245, 245, 245);"> “Ordering your favorite dishes at NomNom is now as easy as sending a text! Simply reply with your order, and we’ll take care of the rest. Enjoy!” </div>
+    </header>
+
+   
+
+    <div class="container">
+        <!-- CATEGORIES SECTION -->
+        <div id="categories-section">
+            <h2 id="categories-title">Categories</h2>
+            <div id="categories-list">
+                <!-- Categories will be populated here by JS -->
+            </div>
+        </div>
+
+        <!-- MAIN SECTION: Filter & Dishes -->
+        <div class="main-section">
+            <!-- Filter Container (Left) -->
+            <div class="filter-container">
+                <div class="filter-header">
+                    <span>Filter</span>
+                    <span class="filter-icon"><i style="color: black;" class="fa fa-filter"></i></span>
+                </div>
+                <div class="filter-group">
+                    <label for="spiciness">Spiciness (0-4)</label>
+                    <input type="range" id="spiciness" min="0" max="4">
+                </div>
+                <div class="filter-group">
+                    <label><input type="checkbox" id="vegetarian"> Vegetarian</label>
+                </div>
+                <div class="filter-group">
+                    <label><input type="checkbox" id="nuts"> Contains Nuts</label>
+                </div>
+                <div class="filter-buttons">
+                    <button id="reset-filters">Reset</button>
+                    <button id="apply-filters">Apply</button>
+                </div>
+            </div>
+
+            <!-- Dishes Container (Right) -->
+            <div class="dishes-container" id="data-container"></div>
+        </div>
+    </div>
+
+</body>
+</html>
